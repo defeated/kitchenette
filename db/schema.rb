@@ -13,6 +13,13 @@
 
 ActiveRecord::Schema.define(version: 20130811040856) do
 
+  create_table "restaurants", force: true do |t|
+    t.string "name",    null: false
+    t.string "url"
+    t.string "cuisine"
+    t.text   "notes"
+  end
+
   create_table "users", force: true do |t|
     t.string   "first_name", null: false
     t.string   "last_name",  null: false
