@@ -9,7 +9,7 @@ module ApplicationHelper
     "https://secure.gravatar.com/avatar/#{ hash }.jpg?#{ options.to_query }"
   end
 
-  def gravatar_image(email, size = 48)
+  def gravatar_image(email, size = 56)
     image_tag gravatar_url(email, s: size),
       height: size, width: size, alt: 'avatar', class: 'avatar'
   end
