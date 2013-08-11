@@ -1,0 +1,55 @@
+<section class="events">
+
+  <!-- today -->
+  <div class="wrapper white-box">
+    <header class="colored green">
+      <hgroup>
+        <h2>Today</h2>
+      </hgroup>
+    </header>
+
+    <article class="event">
+      <div class="image">
+        <%= @order[:day] %>
+        <time><%= @order[:date] %></time>
+      </div><!-- .image -->
+
+      <div class="info">
+        <h3><%= @order[:restaurant] %></h3>
+        <p>
+          Lorem ipsum dolor sit amet.
+          <%= link_to @order[:url], @order[:url], target: '_blank' %>
+        </p>
+        <a class="button orange medium" href="#">Order now</a>
+      </div><!-- .info -->
+    </article><!-- .event -->
+  </div><!-- .wrapper -->
+
+  <!-- this week -->
+  <div class="wrapper white-box">
+    <header class="colored yellow">
+      <hgroup>
+        <h2>This week</h2>
+      </hgroup>
+    </header>
+
+    <% @roster.each do |order| %>
+      <article class="event">
+        <div class="image">
+          <%= order[:day] %>
+          <time><%= order[:date] %></time>
+        </div><!-- .image -->
+
+        <div class="info">
+          <h3><%= order[:restaurant] %></h3>
+          <p>
+            Lorem ipsum dolor sit amet.
+            <%= link_to order[:url], order[:url], target: '_blank' %>
+          </p>
+          <a class="button orange medium" href="#">Order now</a>
+        </div><!-- .info -->
+      </article><!-- .event -->
+    <% end %>
+  </div><!-- .wrapper -->
+
+</section><!-- .events -->
