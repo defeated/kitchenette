@@ -1,6 +1,19 @@
 class OrdersController < ApplicationController
   def index
 
+    # http://www.omniglot.com/language/phrases/bonappetit.htm
+    @enjoy = [
+      'Bon appetit',    # english
+      'Bon appétit',    # french
+      'Buon appetito',  # italian
+      'Guten Appetit',  # german
+      'Poftă bună',     # romanian
+      'Buen apetito',   # spanish
+      'Bom apetite',    # portuguese
+      'Afiyet olsun',   # turkish
+      'Bil hana'        # lebanese
+    ].sample
+
     @roster = [
       {
         day: 'Monday',
