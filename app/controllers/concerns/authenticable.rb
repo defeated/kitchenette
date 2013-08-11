@@ -3,7 +3,7 @@ module Authenticable
 
   def current_user
     @current_user ||= if user_id = session[:user_id]
-      User.where(id: user_id)
+      User.find_by(id: user_id)
     end
   end
 
