@@ -18,4 +18,11 @@ module ApplicationHelper
     css = href == request.path ? 'active' : ''
     link_to text, href, class: css
   end
+
+  def body_css_classes
+    css = []
+    css << controller_path.split('/')[0..-1]
+    css << action_name
+    css.flatten.join(' ')
+  end
 end
