@@ -1,5 +1,6 @@
 class ApplicationController < ActionController::Base
   include Authenticable
+  before_action :authenticate!
 
   # Prevent CSRF attacks by raising an exception.
   # For APIs, you may want to use :null_session instead.

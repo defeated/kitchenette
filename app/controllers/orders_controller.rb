@@ -1,6 +1,4 @@
 class OrdersController < ApplicationController
-  before_action :authenticate!
-
   def index
 
     # http://www.omniglot.com/language/phrases/bonappetit.htm
