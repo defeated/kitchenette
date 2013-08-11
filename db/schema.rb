@@ -13,6 +13,15 @@
 
 ActiveRecord::Schema.define(version: 20130811040856) do
 
+  create_table "orders", force: true do |t|
+    t.integer  "restaurant_id"
+    t.datetime "order_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "orders", ["restaurant_id"], name: "index_orders_on_restaurant_id"
+
   create_table "restaurants", force: true do |t|
     t.string "name",    null: false
     t.string "url"
