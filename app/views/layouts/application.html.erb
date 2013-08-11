@@ -2,24 +2,25 @@
 <html>
 <head>
   <title>Kitchenette</title>
-  <%= stylesheet_link_tag    'https://litmus.com/stylesheets/style.css' %>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= stylesheet_link_tag '//litmus.com/stylesheets/style.css' %>
+  <%= stylesheet_link_tag 'application', media: 'all',
+    'data-turbolinks-track' => true %>
 
-  <script type="text/javascript" src="//use.typekit.net/zqt8qdp.js"></script>
+  <%= javascript_include_tag '//use.typekit.net/zqt8qdp.js' %>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag 'application',
+    'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
 </head>
-<body
-  class="<%= controller.controller_name %> <%= controller.action_name%>">
+<body class="<%= controller_name %> <%= action_name%>">
 
   <header>
     <nav class="global">
       <div class="wrapper">
         <ul>
           <li class="home">
-            <%= link_to image_tag("https://litmus.com/images/logo.png"),
+            <%= link_to image_tag("//litmus.com/images/logo.png"),
               '/', class: 'active' %>
           </li><!-- .home -->
           <li>
