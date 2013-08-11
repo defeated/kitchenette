@@ -5,6 +5,10 @@ class User < ActiveRecord::Base
     validator.validates :email, uniqueness: { case_sensitive: false }
   end
 
+  def self.for_email(email, params)
+    where(email: email).first_or_create(params)
+  end
+
   def full_name
     "#{ first_name } #{ last_name }"
   end

@@ -1,6 +1,13 @@
 Kitchenette::Application.routes.draw do
-  resources :orders
+  root to: 'orders#index'
 
+  resources :orders
+  resources :sessions, only: [ :new, :create, :destroy ]
+
+  scope '/auth' do
+    post  '/:provider/callback'  => 'sessions#create'
+    get   '/failure'             => 'sessions#create', as: :wompwomp
+  end
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
