@@ -6,5 +6,7 @@ class CreateRestaurants < ActiveRecord::Migration
       t.string :cuisine
       t.text :notes
     end
+
+    add_index :restaurants, :name, unique: true
   end
 end

@@ -39,6 +39,8 @@ ActiveRecord::Schema.define(version: 20130811155455) do
     t.text   "notes"
   end
 
+  add_index "restaurants", ["name"], name: "index_restaurants_on_name", unique: true
+
   create_table "users", force: true do |t|
     t.string   "first_name", null: false
     t.string   "last_name",  null: false
