@@ -13,4 +13,9 @@ module ApplicationHelper
     image_tag gravatar_url(email, s: size),
       height: size, width: size, alt: 'avatar', class: 'avatar'
   end
+
+  def nav_link(text, href)
+    css = href == request.path ? 'active' : ''
+    link_to text, href, class: css
+  end
 end

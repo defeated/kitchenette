@@ -1,7 +1,7 @@
 Kitchenette::Application.routes.draw do
   root to: 'orders#index'
 
-  resources :orders
+  resources :orders, only: [ :index ]
   resources :sessions, only: [ :new, :create, :destroy ]
 
   scope '/auth' do
