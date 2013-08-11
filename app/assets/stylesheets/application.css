@@ -10,6 +10,8 @@ body.orders .events .event .image {
   text-align: center;
 }
 
-body.orders .events .event .image time {
-  display: block;
+body.orders .events .event .image .icon {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
 }

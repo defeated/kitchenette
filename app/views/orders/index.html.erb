@@ -10,7 +10,8 @@
 
     <article class="event">
       <div class="image">
-        <%= @order[:day] %>
+        <span class="icon icon-food"></span>
+        <div><%= @order[:day] %></div>
         <time><%= @order[:date] %></time>
       </div><!-- .image -->
 
@@ -36,7 +37,8 @@
     <% @roster.each do |order| %>
       <article class="event">
         <div class="image">
-          <%= order[:day] %>
+          <span class="icon icon-food"></span>
+          <div><%= order[:day] %></div>
           <time><%= order[:date] %></time>
         </div><!-- .image -->
 
