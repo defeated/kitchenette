@@ -14,8 +14,10 @@ module ApplicationHelper
       height: size, width: size, alt: 'avatar', class: 'avatar'
   end
 
-  def nav_link(text, href)
-    css = href == request.path ? 'active' : ''
+  def nav_link(text, href, pattern)
+    pattern = "^" + pattern + "$" if pattern.is_a?(String)
+    pattern = Regexp.new pattern
+    css = controller_path =~ pattern ? 'active' : ''
     link_to text, href, class: css
   end
 
