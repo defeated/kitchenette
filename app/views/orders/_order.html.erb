@@ -1,0 +1,16 @@
+<article class="event">
+  <div class="image">
+    <span class="icon icon-food"></span>
+    <div><%= order[:day] %></div>
+    <time><%= order[:date] %></time>
+  </div><!-- .image -->
+
+  <div class="info">
+    <h3><%= order[:restaurant] %></h3>
+    <p>
+      Lorem ipsum dolor sit amet.
+      <%= link_to order[:url], order[:url], target: '_blank' %>
+    </p>
+    <a class="button orange medium" href="#">Order now</a>
+  </div><!-- .info -->
+</article><!-- .event -->
