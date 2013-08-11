@@ -4,9 +4,11 @@
   <title>Kitchenette</title>
   <%= stylesheet_link_tag    'https://litmus.com/stylesheets/style.css' %>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+
   <script type="text/javascript" src="//use.typekit.net/zqt8qdp.js"></script>
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
   <%= csrf_meta_tags %>
 </head>
 <body
@@ -23,6 +25,14 @@
           <li>
             <%= link_to 'Orders', '#' %>
           </li>
+
+          <% if logged_in? %>
+            <li class="user"
+              title="you're a legend, <%= current_user.first_name %>">
+              <%= gravatar_image current_user.email %>
+            </li><!-- .user -->
+          <% end %>
+
         </ul>
       </div><!-- .wrapper -->
     </nav><!-- .global -->
