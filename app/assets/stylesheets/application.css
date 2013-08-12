@@ -17,6 +17,15 @@ body.orders .events .event .image .icon {
   width: 30px;
 }
 
+body.orders .events .event .info em {
+  vertical-align: middle;
+  font-size: 14px;
+  font-weight: 200;
+  font-family: 'proxima-nova',sans-serif;
+  text-transform: none;
+  color: #888;
+}
+
 body.orders .events .try h3 {
   text-align: center;
   font-style: italic;

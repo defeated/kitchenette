@@ -6,7 +6,11 @@
   </div><!-- .image -->
 
   <div class="info">
-    <h3><%= order[:restaurant] %></h3>
+    <h3>
+      <%= order[:restaurant] %>
+      <em><%= order[:cuisine] %></em>
+    </h3>
+
     <p>
       Lorem ipsum dolor sit amet.
       <%= link_to order[:url], order[:url], target: '_blank' %>
