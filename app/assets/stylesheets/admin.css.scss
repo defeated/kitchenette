@@ -1,0 +1,50 @@
+  body.admin {
+    form {
+      padding: 50px;
+    }
+
+    textarea {
+      line-height: 20px;
+      height: 48px;
+    }
+
+    .main .wrapper.white-box {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    table {
+      width: 100%;
+    }
+
+    th, td {
+      padding: 16px;
+    }
+
+    tr:nth-child(odd) {
+      background-color: #F7F7F7;
+    }
+
+    th {
+      text-align: left;
+      background-color: #68BD80;
+      color: #2A580C;
+      text-shadow: 0 1px 0 #8EBE97;
+      font-size: 14px;
+      font-weight: bold;
+      border-right: 1px solid #64B033;
+      border-bottom: 1px solid #4C8B20;
+      border-top: 1px solid #C1E4CB;
+    }
+
+    td {
+      font-size: 14px;
+      border-right: 1px solid #E1E3DE;
+      border-bottom: 1px solid #E1E3DE;
+      white-space: nowrap;
+
+      &:first-child {
+        width: 50%;
+      }
+    }
+}

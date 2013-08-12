@@ -27,6 +27,8 @@
           <li>
             <%= nav_link 'This Week', root_path, 'orders' %>
           </li>
+          <li>
+            <%= nav_link 'Admin', admin_orders_path, /^admin\// %>
           </li>
 
           <% if logged_in? %>
@@ -40,6 +42,19 @@
       </div><!-- .wrapper -->
     </nav><!-- .global -->
   </header>
+
+  <% if controller_path.starts_with?('admin/') %>
+    <nav class="secondary">
+      <div class="wrapper">
+        <ul>
+          <li>
+            <%= nav_link 'Orders', admin_orders_path,
+              'admin/orders' %>
+          </li>
+        </ul>
+      </div><!-- .wrapper -->
+    </nav><!-- .secondary -->
+  <% end %>
 
   <div class="main">
     <%= yield %>

@@ -4,6 +4,10 @@ Kitchenette::Application.routes.draw do
   resources :orders, only: [ :index ]
   resources :sessions, only: [ :new, :create, :destroy ]
 
+  namespace :admin do
+    resources :orders
+  end
+
   scope '/auth' do
     post  '/:provider/callback'  => 'sessions#create'
     get   '/failure'             => 'sessions#create', as: :wompwomp
