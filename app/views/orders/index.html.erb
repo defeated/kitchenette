@@ -8,7 +8,7 @@
       </hgroup>
     </header>
 
-    <%= render 'order', order: @order %>
+    <%= render 'order', order: @order, today: true %>
   </div><!-- .wrapper -->
 
   <!-- this week -->
@@ -20,7 +20,7 @@
     </header>
 
     <% @roster.each do |order| %>
-      <%= render 'order', order: order %>
+      <%= render 'order', order: order, today: false %>
     <% end %>
 
     <article class="try last-box">

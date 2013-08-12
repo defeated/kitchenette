@@ -1,4 +1,4 @@
-<article class="event">
+<article class="event <%= "last-box" if today %>">
   <div class="image">
     <h4>
       <date><%= Date::ABBR_DAYNAMES[ order[:date].wday ] %></date>
