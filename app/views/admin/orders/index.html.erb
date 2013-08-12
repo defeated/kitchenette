@@ -1,0 +1,71 @@
+<section>
+
+  <div class="wrapper white-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Restaurant</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="3">
+            <%= link_to 'New Order', new_admin_order_path,
+              class: 'btn xlarge green block pull-right' %>
+          </td>
+        </tr>
+      </tfoot>
+      <tbody>
+
+        <% if @active_orders.any? %>
+          <% @active_orders.each do |order| %>
+            <tr>
+              <td><%= order.order_at %></td>
+              <td><%= order.restaurant.name %></td>
+            </tr>
+          <% end %>
+
+        <% else %>
+          <tr>
+            <td colspan="3">
+              <span class="none">No active orders found. Getting hungry?</span>
+            </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="wrapper white-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Restaurant</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <% if @inactive_orders.any? %>
+          <% @inactive_orders.each do |order| %>
+            <tr>
+              <td>xxx</td>
+            </tr>
+          <% end %>
+
+        <% else %>
+          <tr>
+            <td colspan="3">
+              <span class="none">No past orders found.</span>
+            </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+  </div>
+</section>

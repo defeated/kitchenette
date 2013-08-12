@@ -1,5 +1,7 @@
 class Admin::OrdersController < ApplicationController
   def index
-    render inline: 'hello', layout: true
+    orders = Order.includes(:restaurant)
+    @active_orders    = orders.active.order(:order_at)
+    @inactive_orders  = orders.inactive.order(order_at: :desc)
   end
 end
