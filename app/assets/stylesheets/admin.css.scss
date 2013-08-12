@@ -46,5 +46,14 @@
       &:first-child {
         width: 50%;
       }
+
+      .none {
+        display: block;
+        text-align: center;
+        padding: 25px;
+        font-size: 24px;
+        font-weight: bold;
+        color: #ddd;
+      }
     }
 }
