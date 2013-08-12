@@ -15,7 +15,7 @@
         <tr>
           <td colspan="5">
             <%= link_to 'New Restaurant', new_admin_restaurant_path,
-              class: 'btn orange large block pull-right' %>
+              class: 'btn xlarge green block pull-right' %>
           </td>
         </tr>
       </tfoot>
@@ -32,9 +32,9 @@
             <td><%= truncate restaurant.notes.presence || 'n/a' %></td>
             <td>
               <%= link_to 'Edit', edit_admin_restaurant_path(restaurant),
-                class: 'button medium orange' %>
+                class: 'button medium navy' %>
               <%= link_to 'Delete', admin_restaurant_path(restaurant),
-                class: 'button medium orange', method: :delete,
+                class: 'button medium red', method: :delete,
                 data: { confirm: 'Are you sure? '} %>
             </td>
           </tr>
