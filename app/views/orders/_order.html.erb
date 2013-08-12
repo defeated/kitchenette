@@ -12,10 +12,19 @@
       <em><%= order[:cuisine] %></em>
     </h3>
 
+    <% if today %>
+      <div class="remaining pull-right">
+        <span class="icon icon-food"></span>
+        1h 30m
+        left to order
+      </div>
+    <% end %>
+
     <p>
       Lorem ipsum dolor sit amet.
       <%= link_to order[:url], order[:url], target: '_blank' %>
     </p>
+
     <a class="button orange medium" href="#">Order now</a>
   </div><!-- .info -->
 </article><!-- .event -->

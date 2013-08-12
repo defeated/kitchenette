@@ -11,10 +11,18 @@ body.orders .events .event .image {
   text-align: center;
 }
 
-body.orders .events .event .image .icon {
+body.orders .events .icon {
   display: inline-block;
   height: 30px;
   width: 30px;
+  vertical-align: middle;
+}
+
+body.orders .events .remaining {
+  margin-top: -55px;
+  height: 30px;
+  font-size: 14px;
+  color: #f00;
 }
 
 body.orders .events .event .info em {
