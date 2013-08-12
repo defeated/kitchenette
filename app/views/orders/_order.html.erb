@@ -1,8 +1,9 @@
 <article class="event">
   <div class="image">
-    <span class="icon icon-food"></span>
-    <div><date><time><%= order[:day] %></time></date></div>
-    <date><time><%= order[:date] %></time></date>
+    <h4>
+      <date><%= Date::ABBR_DAYNAMES[ order[:date].wday ] %></date>
+      <span class="number"><%= order[:date].day %></span>
+    </h4>
   </div><!-- .image -->
 
   <div class="info">
