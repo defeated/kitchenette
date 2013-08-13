@@ -45,7 +45,6 @@
         <tr>
           <th>Date</th>
           <th>Restaurant</th>
-          <th></th>
         </tr>
       </thead>
       <tbody>
@@ -53,13 +52,14 @@
         <% if @inactive_orders.any? %>
           <% @inactive_orders.each do |order| %>
             <tr>
-              <td>xxx</td>
+              <td><%= order.order_at %></td>
+              <td><%= order.restaurant.name %></td>
             </tr>
           <% end %>
 
         <% else %>
           <tr>
-            <td colspan="3">
+            <td colspan="2">
               <span class="none">No past orders found.</span>
             </td>
           </tr>

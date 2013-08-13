@@ -1,0 +1,14 @@
+<section>
+  <div class="wrapper white-box">
+
+    <script>
+      Litmus.restaurants = <%= @restaurants.to_json.html_safe %>;
+    </script>
+
+    <ul id="restaurant-suggestions" style="display:none;">
+    </ul>
+
+    <%= render 'form' %>
+
+  </div>
+</section>
