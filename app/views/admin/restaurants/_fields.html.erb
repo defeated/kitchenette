@@ -1,0 +1,25 @@
+<div class="control-row">
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'span12' %>
+</div>
+
+<div class="control-row">
+  <%= f.label :url %>
+  <%= f.text_field :url, class: 'span12' %>
+</div>
+
+<div class="control-row">
+  <%= f.label :cuisine do %>
+    Cuisine <span>(optional)</span>
+  <% end %>
+
+  <%= f.text_field :cuisine, class: 'span12' %>
+</div>
+
+<div class="control-row">
+  <%= f.label :notes do %>
+    Notes <span>(optional)</span>
+  <% end %>
+
+  <%= f.text_area :notes, class: 'span12' %>
+</div>
