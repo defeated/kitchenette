@@ -1,6 +1,7 @@
 /*
  *= require_self
  *= require admin
+ *= require admin/orders
  */
 
 body {

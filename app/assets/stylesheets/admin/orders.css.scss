@@ -1,0 +1,26 @@
+#restaurant-suggestions {
+  position: absolute;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #88A1BF;
+  border-top: 0;
+
+  li {
+    display: block;
+    padding: 10px;
+    cursor: pointer;
+
+    &:hover {
+      color: #DB9F10;
+    }
+
+    &:nth-child(odd) {
+      background-color: #CDE1F9;
+    }
+
+    &:nth-child(even) {
+      background-color: #B6CBE5;
+    }
+  }
+}
