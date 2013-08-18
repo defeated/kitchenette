@@ -53,8 +53,8 @@ body.admin {
     border-bottom: 1px solid #E1E3DE;
     white-space: nowrap;
 
-    &:first-child {
-      width: 50%;
+    &:last-child {
+      width: 195px;
     }
 
     .none {
@@ -64,6 +64,14 @@ body.admin {
       font-size: 24px;
       font-weight: bold;
       color: #ddd;
+    }
+  }
+
+  &.restaurants {
+    td {
+      &:first-child {
+        width: 50%;
+      }
     }
   }
 }
