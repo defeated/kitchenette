@@ -7,6 +7,7 @@ Kitchenette::Application.routes.draw do
   namespace :admin do
     resources :orders
     resources :restaurants
+    resources :users
   end
 
   scope '/auth' do

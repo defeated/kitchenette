@@ -1,0 +1,42 @@
+<section>
+  <div class="wrapper white-box">
+
+    <table>
+      <thead>
+        <tr>
+          <th>Email</th>
+          <th>First Name</th>
+          <th>Last Name</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <td colspan="4">
+            <%= link_to 'New User', new_admin_user_path,
+              class: 'btn xlarge green block pull-right' %>
+          </td>
+        </tr>
+      </tfoot>
+      <tbody>
+
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.email %></td>
+            <td><%= user.first_name %></td>
+            <td><%= user.last_name %></td>
+            <td>
+              <%= link_to 'Edit', edit_admin_user_path(user),
+                class: 'button medium navy' %>
+              <%= link_to 'Delete', admin_user_path(user),
+                class: 'button medium red', method: :delete,
+                data: { confirm: 'Are you sure? '} %>
+            </td>
+          </tr>
+        <% end %>
+
+      </tbody>
+    </table>
+
+  </div>
+</section>
