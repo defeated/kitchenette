@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130811155455) do
+ActiveRecord::Schema.define(version: 20130818015056) do
 
   create_table "meals", force: true do |t|
     t.integer  "order_id"
@@ -42,11 +42,12 @@ ActiveRecord::Schema.define(version: 20130811155455) do
   add_index "restaurants", ["name"], name: "index_restaurants_on_name", unique: true
 
   create_table "users", force: true do |t|
-    t.string   "first_name", null: false
-    t.string   "last_name",  null: false
-    t.string   "email",      null: false
+    t.string   "first_name",                 null: false
+    t.string   "last_name",                  null: false
+    t.string   "email",                      null: false
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "remote",     default: false, null: false
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

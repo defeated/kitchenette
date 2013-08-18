@@ -8,6 +8,16 @@ body.admin {
     height: 48px;
   }
 
+  .control-row.check {
+    label {
+      display: inline-block;
+    }
+
+    input[type=checkbox] {
+      margin-top: 0;
+    }
+  }
+
   .main .wrapper.white-box {
     padding-top: 0;
     padding-bottom: 0;

@@ -29,6 +29,11 @@
     <%= f.text_field :last_name, class: 'span12' %>
   </div>
 
+  <div class="control-row check">
+    <%= f.check_box :remote %>
+    <%= f.label :remote, 'Remote?' %>
+  </div>
+
   <div class="control-row cf">
     <%= f.submit class: 'btn xlarge green block pull-right' %>
   </div>
