@@ -1,0 +1,15 @@
+.flash {
+  line-height: 33px;
+  padding-left: 10px;
+  font-size: 14px;
+  text-shadow: 0 1px 0 #fff;
+  position: relative;
+  top: -25px;
+
+  &.notice {
+    color: #468847;
+    background-color: #dff0d8;
+    border: 1px solid #d6e9c6;
+    border-left: 6px solid #d6e9c6;
+  }
+}
